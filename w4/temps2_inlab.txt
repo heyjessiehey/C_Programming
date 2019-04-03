@@ -1,0 +1,39 @@
+// Name: (Jessie) Gayeon Ko
+// Student Number: 040 704 124
+// Email: gko4@myseneca.ca
+// Section: IPC144SUU
+// Workshop: 3 in_lab
+
+#define _CRT_SECURE_NO_WARNINGS
+
+// Place your code below
+#include <stdio.h>
+
+int main()
+{
+	int day = 0;
+	int count;
+	int high[10] = { 0 }, low[10] = { 0 }; // initialize arrays
+	printf("---=== IPC Temperature Calculator V2.0 ===---\n");
+	printf("Please enter the number of days, between 3 and 10, inclusive: ");
+	scanf("%d", &day); // input invalid number
+	printf("\n");
+	while (3 >= day || day >= 10) // when recieving invalid input, execute while construct until recieving correct value
+	{
+		printf("Invalid entry, please enter a number between 3 and 10, inclusive: ");
+		scanf("%d", &day);
+		printf("\n");
+	}
+	for (count = 0; count < day; count++) // input high and low temperatures and output them each days 
+	{
+		printf("Day %d - High: ", count + 1);
+		scanf("%d", &high[count]);
+		printf("Day %d - Low: ", count + 1);
+		scanf("%d", &low[count]);
+	}
+	printf("\n");
+	printf("Day  Hi  Low\n");
+	for (count = 0; count < day; count++) // display parallel array
+		printf("%d %4d %4d\n", count + 1, high[count], low[count]);
+	return 0;
+}

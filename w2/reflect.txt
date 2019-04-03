@@ -1,0 +1,10 @@
+1- What do think is the most important thing you learned in this workshop?
+	The most important thing I learned is that making code using the type 'while'. 
+2- Why must you add .005 to the value derived when calculating the GST owing?
+	On my matrix, calculating the GST shows that 1.12. 
+	It supposed to be 1.13 by rounding up from 1.1284(8.68*.13).
+3- What is the result of a casting operation?
+	The result of a cating operation is that I used Float instead of Double so, the outcome became Float where I used a casting operation. Also, I saved memory using Float instead of Double. 
+4- Why do you think you were required to use the modulus operator in this workshop?
+	Using the modulus operator needs to use selection construct which is 'If' instead of using iteration construct which is 'While'. 
+	Therefore, I can practice to use both constructs in my codes. 

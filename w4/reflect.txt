@@ -1,0 +1,8 @@
+1)	In one or two sentences explain why the arrays in this program have to be declared to hold 10 elements?
+The number of days entered would be 10. The condition of rage is between 3 and 10 for number of days.
+2)	In two or three sentences explain the advantages and disadvantages of using matching arrays?
+Matching arrays are very organized and simple to understand the datas.
+Matching arrays store the elements in consecutive memory so it is difficult to add and delete the data.
+3)Was the at home portion of this workshop too easy, just right or too hard? Why
+It was hard. I hope that we learn more examples of making codes for our workshop during the lecture(monday class) instead of just listing powerpoint which already on IPC144 website. When I work on IPC144 workshop, most of time I have to learn by myself to search the google or youtube in order to learn how to make codes.
+For example, I didn’t learn how to create codes for highest value or lowest value using array from IPC144 class. I learned about syntax of C language from the class. However, learning only syntax is not enough doing workshop on time by myself. 

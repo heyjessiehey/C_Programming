@@ -1,0 +1,11 @@
+1) Name all the iteration constructs.
+	for, do while, do
+
+2) In two or three sentences explain the difference between a ¡°do while¡± and a ¡°while¡± loop?
+	do while construct executes sequence at least once and check the condition.
+	But while construct execute sequence when the condition is true. 
+
+3) In two or three sentences explain what is meant by the term conditional expression?
+	Conditional expression has a condition and two sub-expression using the ? : operator.
+	If condition is true, first sub-expression is evaluated.
+	If conditon is false, second sub-expression is evaluated.

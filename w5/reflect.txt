@@ -1,0 +1,7 @@
+1) In two or three sentences discuss the advantages of using an array of structs versus
+parallel arrays when dealing with related data
+When I use an array of structs, it is more convinient to edit, add, and delete the data.
+One member holds the key, while the ohter member holds the data. 
+2) The preferred method of declaring a struct data type is in a header file. Briefly explain
+why
+It allows us to wirte code in one spot and edit it in that one spot alone.

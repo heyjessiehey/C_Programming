@@ -1,0 +1,4 @@
+1.	Can you think of a more efficient way to ask a user to add the required information to each data field?
+
+2.	Explain why a C string that is required to store up to 25 characters must be capable of storing 26 characters.
+C string always include NULL character at the end. 

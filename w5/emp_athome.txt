@@ -1,0 +1,138 @@
+/*
+Name: (Jessie) Gayeon Ko
+Student number: 040 704 124
+Email: gko4@myseneca.ca
+Workshop:5 at home
+Section: SUU
+Date: Oct 16 Mon
+*/
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+
+// Define Number of Employees "SIZE" to be 2
+#define SIZE 4
+
+// Declare Struct Employee 
+struct Employee {
+	int id;
+	int age;
+	double salary;
+};
+/* main program */
+int main(void) {
+
+	int option = 0;
+	int i = 0, cur_emp = 0;
+	int upDate, idelete;
+	int current = -1;
+	int n = 4;
+	printf("---=== EMPLOYEE DATA ===---\n\n");
+
+	// Declare a struct Employee array "emp" with SIZE elements 
+	// and initialize all elements to zero
+	struct Employee emp[SIZE];
+
+	do {
+		// Print the option list
+
+		printf("1. Display Employee Information\n");
+		printf("2. Add Employee\n");
+		printf("3. Update Employee Salary\n");
+		printf("4. Remove Employee\n");
+		printf("0. Exit\n\n");
+		printf("Please select from the above options: ");
+		scanf("%d", &option);
+		printf("\n");
+
+		switch (option) {
+		case 0:	// Exit the program
+			printf("Exiting Employee Data Program. Good Bye!!!\n");
+			break;
+		case 1: 
+			printf("EMP ID  EMP AGE EMP SALARY\n");
+			printf("======  ======= ==========\n");
+			for (i = 0; i < cur_emp; i++)
+				printf("%6d%9d%11.2lf\n", emp[i].id, emp[i].age, emp[i].salary);
+
+			printf("\n");
+			break;
+		case 2:	
+			printf("Adding Employee\n");
+			printf("===============\n");
+
+			if (cur_emp < SIZE)
+			{
+				printf("Enter Employee ID: ");
+				scanf("%d", &emp[cur_emp].id); // input id information into struct Employee emp
+				printf("Enter Employee Age: ");
+				scanf("%d", &emp[cur_emp].age); // input age information into struct Employee emp
+				printf("Enter Employee Salary: ");
+				scanf("%lf", &emp[cur_emp].salary); // input salary information into struct Employee emp
+				printf("\n");
+				cur_emp++; // increase number of employees
+			}
+			else // limit of Max number of emplyees
+			{
+				printf("ERROR!!! Maximum Number of Employees Reached\n");
+				printf("\n");
+			}
+			break;
+		case 3: // update employee salary
+			printf("Update Employee Salary\n");
+			printf("======================\n");
+			do
+			{
+				printf("Enter Employee ID: ");
+				scanf("%d", &upDate);
+				for (i = 0;i < SIZE;i++) // using for loop, match the input value and employee id
+				{
+					if (emp[i].id == upDate)
+						current = i;
+				}
+				if (emp[current].salary > 0) //update the salary for the employee matched input value above
+				{
+					printf("The current salary is %.2lf\n", emp[current].salary);
+					printf("Enter Employee New Salary: ");
+					scanf("%lf", &emp[current].salary);
+				}
+			} while (current < 0);
+			printf("\n");
+			break;
+		case 4: // remove employee
+			printf("Remove Employee\n");
+			printf("===============\n");
+			do
+			{
+				printf("Enter Employee ID: ");
+				scanf("%d", &idelete);
+				for (i = 0; i < cur_emp;i++) // searching for employee id matches input value(idelete)
+				{
+					if (emp[i].id == idelete)
+						current = i;
+				}
+				if (emp[current].id > 0)
+				{
+					for (i = current;i < cur_emp;i++)
+					{
+						emp[i] = emp[i + 1];
+					}
+					n -= 1;
+					cur_emp--; // decrease total data after deleting
+					printf("Employee %d will be removed", idelete);
+					printf("\n");
+				}
+			} while (current < 0);
+			printf("\n");
+			break;
+		default:
+			printf("ERROR: Incorrect Option: Try Again\n\n");
+		}
+
+	} while (option != 0);
+
+
+	return 0;
+}
+
